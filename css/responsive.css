@@ -1,0 +1,18 @@
+@media(max-width: 375px) {
+    .names{
+        display: block;
+    }
+    .names .first-name, .names .last-name {
+        width: 100%;
+    }
+    .names #name {
+        margin-bottom: 25px;
+    }
+
+    .query {
+        display: block;
+    }
+    .query .radio-option:first-child {
+        margin-bottom: 15px;
+    }
+}
