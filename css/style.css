@@ -171,3 +171,60 @@ label {
     background-color: hsl(169, 82%, 27%, 15%);
     border-color: hsl(169, 82%, 27%);
 }
+
+/* ---- SUCCESS MESSAGE ---- */
+
+.success-message {
+    position: absolute;
+    top: 2%;
+    background-color: hsl(187, 24%, 22%);
+    border-radius: 10px;
+    padding: 25px 20px 25px 20px;
+}
+
+.success-message .success-header {
+    display: flex;
+}
+
+.success-message .success-header img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.success-message .success-header .success-title {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.success-message .success-text {
+    color: white;
+    opacity: 80%;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.hidden {
+    opacity: 0;
+}
+.show {
+    opacity: 100;
+}
+
+.animation {
+    animation: success 4s linear;
+}
+@keyframes success {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 100;
+    }
+    90% {
+        opacity: 100;
+    }
+    100% {
+        opacity: 0;
+    }
+}

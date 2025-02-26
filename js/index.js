@@ -1,6 +1,8 @@
 const form = document.getElementById('form')
 const required = document.querySelectorAll('.required')
 
+const inputs = document.querySelectorAll(".input, .typeCheck");
+
 const inputRadio = document.querySelectorAll('.radio')
 const inputGeneralRadio = document.getElementById('radiogeneral')
 const inputSupportRadio = document.getElementById('radiosupport') 
@@ -27,7 +29,6 @@ inputRadio.forEach(radio => {
 })
 
 document.addEventListener("DOMContentLoaded", function () {
-    const inputs = document.querySelectorAll(".input, .typeCheck");
 
     inputs.forEach(input => {
         if (input.type === "radio") {
@@ -116,6 +117,37 @@ form.addEventListener('submit', (event) => {
         required[5].classList.remove('hide')
     } else {
         required[5].classList.add('hide')
+    }
+
+    // SUCCESS MESSAGE
+
+    let isValid = true
+
+    inputs.forEach(input => {
+        if(input.type === "checkbox" && !input.checked) {
+            isValid = false
+        } else if (input.type !== "checkbox" && input.type !== "radio" && input.value.trim() === '') {
+            isValid = false
+        }
+    })
+
+    // RADIO SUCCESS MESSAGE VALIDATION
+    if(!inputGeneralRadio.checked && !inputSupportRadio.checked) {
+        isValid = false
+    }
+
+    //SUCCESS MESSAGE FINAL
+    function showSuccessMessage(){
+        let succcessMessage = document.getElementById('success-div')
+
+        succcessMessage.classList.add('animation')
+        setTimeout(() => {
+            succcessMessage.classList.remove('animation')
+        }, 4000);
+    }
+
+    if(isValid) {
+        showSuccessMessage()
     }
 })
 

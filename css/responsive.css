@@ -15,4 +15,14 @@
     .query .radio-option:first-child {
         margin-bottom: 15px;
     }
+
+    .success-message {
+        width: 320px;
+    }
+}
+
+@media (max-width:320px) {
+    .success-message {
+        width: 300px;
+    }
 }
