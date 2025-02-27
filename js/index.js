@@ -151,6 +151,15 @@ form.addEventListener('submit', (event) => {
     }
 })
 
+// ACTIVE STYLE FIX
+inputs.forEach(input => {
+    input.addEventListener('change', ()=>{
+        if(input.value === '') {
+            input.classList.remove('active')
+        }
+    })
+})
+
 
 
 
