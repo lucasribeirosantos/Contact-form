@@ -5,7 +5,7 @@
     .names .first-name, .names .last-name {
         width: 100%;
     }
-    .names #name {
+    .names .first-name {
         margin-bottom: 25px;
     }
 
