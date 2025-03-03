@@ -18,81 +18,77 @@
 </head>
 <body>
 
-  <form action="#" id="form">
+  <form action="#" id="form" role="form">
     <h1 class="title">Contact Us</h1>
+    <main>
+      <section class="names" role="region">
+        <!-- FIRST NAME -->
+        <div class="first-name">  
+          <label for="name" class="name-title">First Name<span class="span">*</span></label>
+          <input  type="text" name="name" class="input type-text" id="name">
+          <p class="required err">This field is required</p>
+        </div>
+        <!-- LAST NAME -->
+        <div class="last-name">  
+          <label for="lastname" class="last-title">Last Name<span class="span">*</span></label>
+          <input type="text" name="lastname" class="input type-text" id="lastname">
+          <p class="required err">This field is required</p>
+        </div>
+      </section>
 
-    <div class="names">
-      <!-- FIRST NAME -->
-      <div class="first-name">  
-        <p class="name-title">First Name<span class="span">*</span></p>
-        <input type="text" name="name" class="input type-text" id="name">
+      <!-- EMAIL ADDRESS -->
+      <section class="email" role="region">
+        <label for="email" class="email-title">Email Address<span class="span">*</span></label>
+        <input type="email" name="email" class="input typeText" id="email">
+        <p class="required err">Please enter a valid email address</p>
+      </section>
+
+      <!-- QUERY TYPE RADIO -->
+      <p class="query-title">Query Type<span class="span">*</span></p>
+      <section class="query" role="region">
+        <div class="radio-option">
+          <input type="radio" name="query" value="general" class="radio typeCheck" id="radiogeneral">
+          <label for="radiogeneral" name="query" class="radio-label">General Enquiry</label>
+        </div>
+
+        <div class="radio-option">
+          <input type="radio" name="query" value="support" class="radio typeCheck" id="radiosupport">
+          <label for="radiosupport" name="query" class="radio-label">Support Request</label>
+        </div>
+      </section>
+
+      <!-- QUERY TYPE REQUIRED -->
+      <p class="required errCheck">Please select a query type</p>
+
+      <!-- MESSAGE TEXT AREA -->
+      <section class="textarea" role="region">
+        <label for="textarea" class="message-title">Message<span class="span">*</span></label>
+        <textarea name="message" class="message input typeText" id="textarea"></textarea>
         <p class="required err">This field is required</p>
-      </div>
-      <!-- LAST NAME -->
-      <div class="last-name">  
-        <p class="last-title">Last Name<span class="span">*</span></p>
-        <input type="text" name="lastname" class="input type-text" id="lastname">
-        <p class="required err">This field is required</p>
-      </div>
-    </div>
+      </section>
 
-    <!-- EMAIL ADDRESS -->
-    <div class="email">
-      <p class="email-title">Email Address<span class="span">*</span></p>
-      <input type="email" name="email" class="input typeText" id="email">
-      <p class="required err">Please enter a valid email address</p>
-    </div>
+      <!-- CONSENT -->
+      <section class="consent" role="region">  
+        <div class="inputconsent">
+          <input type="checkbox" name="consent" class="typeCheck" id="consent">
+          <label for="consent" name="consent">I consent to being contacted by the team<span class="span">*</span></label>
+        </div>
+        <p class="required errCheck">To submit this form, please consent to being contacted</p>
+      </section>
 
-    <!-- QUERY TYPE RADIO -->
-    <p class="query-title">Query Type<span class="span">*</span></p>
-    <div class="query">
-      <div class="radio-option">
-        <input type="radio" name="query" value="general" class="radio typeCheck" id="radiogeneral">
-        <label for="radiogeneral" name="query" class="radio-label">General Enquiry</label>
-      </div>
-
-      <div class="radio-option">
-        <input type="radio" name="query" value="support" class="radio typeCheck" id="radiosupport">
-        <label for="radiosupport" name="query" class="radio-label">Support Request</label>
-      </div>
-    </div>
-
-    <!-- QUERY TYPE REQUIRED -->
-    <p class="required errCheck">Please select a query type</p>
-
-    <!-- MESSAGE TEXT AREA -->
-    <div class="textarea">
-      <p class="message-title">Message<span class="span">*</span></p>
-      <textarea name="message" class="message input typeText" id="textarea"></textarea>
-      <p class="required err">This field is required</p>
-    </div>
-
-    <!-- CONSENT -->
-    <div class="consent">  
-      <div class="inputconsent">
-        <input type="checkbox" name="consent" class="typeCheck" id="consent">
-        <label for="consent" name="consent">I consent to being contacted by the team<span class="span">*</span></label>
-      </div>
-      <p class="required errCheck">To submit this form, please consent to being contacted</p>
-    </div>
-
-      <!-- SUBMIT BUTTON -->
-      <button class="submit">Submit</button>
+        <!-- SUBMIT BUTTON -->
+        <button class="submit">Submit</button>
+    </main>
   </form>
 
-  <div class="success-message hidden" id="success-div">
+  <section class="success-message hidden" id="success-div" role="complementary">
     <div class="success-header">
       <img src="./assets/images/icon-success-check.svg" alt="icon check">
       <p class="success-title">Message Sent!</p>
     </div>
     <p class="success-text">Thanks for completing the form. We'll be in touch soon!</p>
-  </div>
+  </section>
   
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
-
   <script src="./js/index.js"></script>
 </body>
 </html>
